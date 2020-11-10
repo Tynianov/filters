@@ -1,0 +1,47 @@
+[
+  {
+    "type": "combobox",
+    "values": [
+      {"id": "not_global", "label": "Not global"},
+      {"id": "global", "label": "Global atlas"}
+    ],
+    "id": "atlas",
+    "enabled": true,
+    "visible": true,
+    "default": "global"
+  },
+  {
+    "type": "combobox",
+    "title": "Global Only Box",
+    "values": [
+      {"id": "yaniv", "label": "Yaniv"},
+      {"id": "alex", "label": "Alex"}
+    ],
+    "id": "alex",
+    "enabled": [
+      {
+        "atlas": "not_global"
+      }
+    ],
+    "visible": true,
+    "default": "yaniv"
+  },
+
+
+  {
+    "type": "timeframe",
+    "title": "Time frame",
+    "id": "time",
+    "default": ["1575907015", "1575909015"],
+    "enabled": [
+      {
+        "alex": "yaniv"
+      }
+    ],
+    "visible": [
+      {
+        "alex": "yaniv"
+      }
+    ]
+  }
+]
